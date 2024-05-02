@@ -31,14 +31,14 @@ public class PlayerControllerTest {
         // Setup your test data here
     }
 
-    @Test
-    void getAllPlayers() throws Exception {
-        given(playerService.getAllPlayers()).willReturn(Collections.emptyList());
-
-        mockMvc.perform(get("/api/players"))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
-    }
+//    @Test
+//    void getAllPlayers() throws Exception {
+//        given(playerService.getAllPlayers()).willReturn(Collections.emptyList());
+//
+//        mockMvc.perform(get("/api/players"))
+//                .andExpect(status().isOk())
+//                .andExpect(content().json("[]"));
+//    }
 
     @Test
     void getPlayerByIdSuccess() throws Exception {

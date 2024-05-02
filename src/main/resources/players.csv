@@ -13,7 +13,7 @@ PlayerID,FirstName,LastName,Age,TeamName,Position,GamesPlayed,Goals,Assists,Yell
 12,Morty,Smith,19,Comets,Midfielder,25,6,11,2,0,20,81,98.5,29,176,68,Canada,2023,5000000
 13,Summer,Wong,22,Galaxy,Defender,40,2,1,4,0,10,85,110.4,31,168,61,Brazil,2024,3000000
 14,Beth,Smith,28,Stars,Goalkeeper,20,0,0,0,0,0,90,15.3,20,174,62,Germany,2025,2500000
-15,Jerry,Smith,31,Meteors,Winger,32,5,9,1,0,35,78,105.1,33,177,73,Egypt,2023,8500000
+15,Jerry,Smith,31,Meteors,Striker,32,5,9,1,0,35,78,105.1,33,177,73,Egypt,2023,8500000
 16,Jessica,Jones,26,Comets,Striker,36,19,4,2,1,58,80,96.7,35,180,70,France,2026,13000000
 17,Diane,Nguyen,29,Novas,Attacking Mid,37,7,10,3,0,42,82,123.0,34,182,75,England,2024,9400000
 18,Bojack,Horseman,32,Rockets,Center Back,33,3,2,5,1,15,84,118.7,30,188,80,USA,2025,7000000

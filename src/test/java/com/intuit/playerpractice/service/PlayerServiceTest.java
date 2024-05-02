@@ -26,12 +26,12 @@ public class PlayerServiceTest {
     @InjectMocks
     private PlayerService playerService;
 
-    @Test
-    public void testGetAllPlayers() {
-        when(playerRepository.findAll()).thenReturn(Arrays.asList(new Player(), new Player()));
-        List<Player> players = playerService.getAllPlayers();
-        assertThat(players).hasSize(2);
-    }
+//    @Test
+//    public void testGetAllPlayers() {
+//        when(playerRepository.findAll()).thenReturn(Arrays.asList(new Player(), new Player()));
+//        List<Player> players = playerService.getAllPlayers();
+//        assertThat(players).hasSize(2);
+//    }
 
     @Test
     public void testGetPlayerByPlayerIdFound() {

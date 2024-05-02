@@ -16,23 +16,24 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 @Component
 public class PlayerDataLoader implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(PlayerDataLoader.class);
 
-    @Autowired
-    private PlayerRepository playerRepository;
+    private final PlayerRepository playerRepository;
 
     @Value("${player.data.csv.path:/players.csv}")
-    private String csvFilePath;
+    public String csvFilePath;
+
+    @Autowired
+    public PlayerDataLoader(PlayerRepository playerRepository) {
+        this.playerRepository = playerRepository;
+    }
 
     @Override
     @Transactional
@@ -46,9 +47,12 @@ public class PlayerDataLoader implements CommandLineRunner {
             List<Player> players = csvToBean.parse();
             List<Player> newPlayers = new ArrayList<>();
 
+            // Fetch all existing player IDs and store them in a set
+            Set<String> existingPlayerIds = playerRepository.findAllPlayerIds();
+
             for (Player player : players) {
-                Optional<Player> existingPlayer = playerRepository.findByPlayerId(player.getPlayerId());
-                if (!existingPlayer.isPresent()) { // Only save new players
+                // Check if the player ID exists in the set of existing player IDs
+                if (!existingPlayerIds.contains(player.getPlayerId())) {
                     newPlayers.add(player);
                 }
             }
@@ -57,6 +61,11 @@ public class PlayerDataLoader implements CommandLineRunner {
         }
         catch (IOException e) {
             logger.error("Error occurred while loading player data from CSV.", e);
+            throw new RuntimeException("Failed to process the player data file", e);
+        }
+        catch (Exception e) {
+            logger.error("An unexpected error occurred: {}", e.getMessage());
+            throw e;
         }
     }
 }

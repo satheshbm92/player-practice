@@ -4,9 +4,11 @@ import com.intuit.playerpractice.model.Player;
 import com.intuit.playerpractice.service.PlayerService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -24,8 +26,8 @@ public class PlayerController {
 
     @Operation(summary = "View a list of available players")
     @GetMapping
-    public ResponseEntity<List<Player>> getAllPlayers() {
-        List<Player> players = playerService.getAllPlayers();
+    public ResponseEntity<List<Player>> getAllPlayers(@PageableDefault(size = 10) Pageable pageable) {
+        List<Player> players = playerService.getAllPlayers(pageable);
         return ResponseEntity.ok(players);
     }
 

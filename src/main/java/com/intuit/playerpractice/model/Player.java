@@ -28,6 +28,7 @@ public class Player {
     @Column(length = 100)
     private String lastName;
 
+    //Change fields from primitive to Integer objects, because of null default values
     private int age;
     private String teamName;
     private String position;
