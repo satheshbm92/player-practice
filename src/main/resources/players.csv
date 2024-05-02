@@ -1,0 +1,31 @@
+PlayerID,FirstName,LastName,Age,TeamName,Position,GamesPlayed,Goals,Assists,YellowCards,RedCards,ShotsOnTarget,PassAccuracy,RunningDistance,Speed,Height,Weight,Nationality,ContractUntil,MarketValue
+1,John,Doe,24,Warriors,Forward,34,12,9,2,0,50,78,104.2,35,182,75,USA,2024,12000000
+2,Jane,Smith,30,Rangers,Goalkeeper,28,0,0,1,0,0,85,20.5,22,175,65,Canada,2023,2000000
+3,Bob,Johnson,27,FC Legends,Midfielder,38,5,10,3,1,30,77,150.3,32,180,70,Germany,2025,8500000
+4,Alice,Murphy,22,Eagles,Defender,41,3,2,5,0,15,82,112.4,30,169,60,Brazil,2023,5000000
+5,Marco,Polo,25,Sharks,Striker,19,21,5,0,0,60,75,95.1,33,188,80,Italy,2024,15000000
+6,Lucy,Graves,28,Dynamos,Winger,34,11,6,2,0,40,79,101.7,34,170,58,Spain,2023,7500000
+7,Omar,Ali,26,Giants,Defensive Mid,30,4,8,4,1,20,80,130.2,31,175,72,Egypt,2025,7000000
+8,Eva,Morris,29,Bullets,Center Back,33,2,3,6,1,10,84,110.0,28,174,67,France,2024,6000000
+9,Tom,Hardy,23,Rockets,Attacking Mid,36,9,12,1,0,45,88,120.5,35,185,77,England,2026,9500000
+10,Kate,Benson,21,Titans,Left Wing,32,8,4,1,0,25,74,115.3,33,168,55,Australia,2025,4000000
+11,Rick,Sanchez,34,Voyagers,Striker,31,15,7,3,0,55,79,108.2,34,190,82,USA,2026,13500000
+12,Morty,Smith,19,Comets,Midfielder,25,6,11,2,0,20,81,98.5,29,176,68,Canada,2023,5000000
+13,Summer,Wong,22,Galaxy,Defender,40,2,1,4,0,10,85,110.4,31,168,61,Brazil,2024,3000000
+14,Beth,Smith,28,Stars,Goalkeeper,20,0,0,0,0,0,90,15.3,20,174,62,Germany,2025,2500000
+15,Jerry,Smith,31,Meteors,Winger,32,5,9,1,0,35,78,105.1,33,177,73,Egypt,2023,8500000
+16,Jessica,Jones,26,Comets,Striker,36,19,4,2,1,58,80,96.7,35,180,70,France,2026,13000000
+17,Diane,Nguyen,29,Novas,Attacking Mid,37,7,10,3,0,42,82,123.0,34,182,75,England,2024,9400000
+18,Bojack,Horseman,32,Rockets,Center Back,33,3,2,5,1,15,84,118.7,30,188,80,USA,2025,7000000
+19,Todd,Chavez,24,Sparks,Left Wing,31,9,5,1,0,30,75,112.2,32,185,77,Australia,2023,6000000
+20,Sarah,Lynn,27,Quasars,Defender,29,4,3,4,0,12,83,107.6,29,169,65,Canada,2025,4000000
+21,Leela,Turan,30,Cyclones,Forward,33,14,8,1,0,48,76,103.4,34,173,70,New Zealand,2026,11000000
+22,Fry,Phillip,25,Thunderbirds,Goalkeeper,18,0,0,1,0,0,87,21.1,21,175,68,USA,2025,2200000
+23,Bender,Rodriguez,29,Tornadoes,Midfielder,40,6,15,3,1,35,80,151.2,33,185,75,Mexico,2024,8000000
+24,Amy,Wong,27,Titans,Defender,42,3,4,6,0,18,85,115.3,30,160,55,China,2023,4700000
+25,Zoidberg,John,32,Comets,Striker,30,20,2,0,0,55,74,97.2,34,170,72,Mars,2025,14000000
+26,Kif,Kroker,24,Galaxy,Winger,37,12,7,2,0,42,78,106.4,35,165,60,Venus,2026,7500000
+27,Hermes,Conrad,31,Stars,Attacking Mid,28,5,13,4,1,30,79,120.7,32,172,66,Jamaica,2024,9100000
+28,Morgan,Proctor,26,Meteors,Center Back,34,1,3,5,0,12,83,111.8,28,176,68,Canada,2025,6100000
+29,Lrrr,Omicronian,35,Rockets,Left Wing,32,10,5,3,1,35,76,113.1,33,190,80,Omicron Persei 8,2023,8900000
+30,Ndnd,Omicronian,29,Quasars,Defender,30,2,2,4,0,10,81,108.9,27,174,67,Omicron Persei 8,2025,4300000
