@@ -22,6 +22,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class PlayerDataLoader implements CommandLineRunner {
@@ -43,19 +44,13 @@ public class PlayerDataLoader implements CommandLineRunner {
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
 
-            List<Player> players = csvToBean.parse();
-            List<Player> newPlayers = new ArrayList<>();
+            var newPlayers = csvToBean.parse().stream().filter(player ->
+                    playerRepository.findByPlayerId(player.getPlayerId()).isEmpty()
+            ).collect(Collectors.toList());
 
-            for (Player player : players) {
-                Optional<Player> existingPlayer = playerRepository.findByPlayerId(player.getPlayerId());
-                if (!existingPlayer.isPresent()) { // Only save new players
-                    newPlayers.add(player);
-                }
-            }
             playerRepository.saveAll(newPlayers);
             logger.info("Loaded {} new players into the database.", newPlayers.size());
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             logger.error("Error occurred while loading player data from CSV.", e);
         }
     }
